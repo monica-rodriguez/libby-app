@@ -16,3 +16,8 @@ Check versions:
 Notes for running the service will be provided later 
 Please install postman to test endpoints locally 
 Please switch to feature branches and do not push commits to main directly. When pushing feature branches alert the team for pr review. 
+
+## RELEASE 1.0.0 
+- Initial set up 
+- JPA set up 
+- Books class
