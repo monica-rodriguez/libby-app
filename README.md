@@ -21,3 +21,12 @@ Please switch to feature branches and do not push commits to main directly. When
 - Initial set up 
 - JPA set up 
 - Books class
+
+## RELEASE 1.1.0
+- Setup bean 
+  - remove !test comment if choosing to run the bean during testing 
+  - do not remove the related import 
+- Csv loader and data setup 
+  - if using intellij community edition: download a csv plug in
+- Controller and Service 
+  - only handles get requests at the moment 
