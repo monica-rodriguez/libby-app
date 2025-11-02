@@ -7,7 +7,7 @@ function Search() {
     const [results, setResults] = useState([])
 
     useEffect(() => {
-        fetch('') // insert backend
+        fetch('http://localhost:8080/starlightFolklore/getAll') // backend endpoint
             .then(res => res.json())
             .then(data => setAllBooks(data))
             .catch(err => console.error(err))

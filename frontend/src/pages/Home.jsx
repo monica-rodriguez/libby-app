@@ -6,7 +6,7 @@ function Home() {
 
   // placeholder data: need to add backend endpoint to fetch books 
     useEffect(() => {
-        fetch('') //insert backend endpoint
+        fetch('http://localhost:8080/starlightFolklore/getAll') //backend endpoint
             .then(res => res.json())
             .then(data => setBooks(data))
             .catch(err => console.error('Error loading books: ', err))

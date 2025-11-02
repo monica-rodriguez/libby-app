@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import BookCard from '../components/BookCard'
 
 function Lists() {
@@ -6,7 +6,7 @@ function Lists() {
     const lists = [lists, setLists] = useState({ checkedOut: [], tbr: [], finished: [] })
     
     useEffect(() => {
-        fetch('') //insert backend
+        fetch('http://localhost:8080/starlightFolklore/getAll') //backend endpoint
             .then(res => res.json())
             .then(data => setLists(data))
             .catch(err => console.error(err))
