@@ -8,7 +8,7 @@ import org.junit.platform.suite.api.Suite;
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features") // src/test/resources/features
-@ConfigurationParameter(key = "cucumber.glue", value = "com.starlight.app.Steps")
+@ConfigurationParameter(key = "cucumber.glue", value = "com.starlight.app.steps")
 @ConfigurationParameter(
         key = "cucumber.plugin",
         value = "pretty,summary,html:target/cucumber-report.html,json:target/cucumber.json,junit:target/cucumber/cucumber.xml"
