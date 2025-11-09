@@ -12,29 +12,24 @@
 // @ConfigurationParameter(
        //  key = "cucumber.plugin",
         // value = "pretty,summary,html:target/cucumber-report.html,json:target/cucumber.json,junit:target/cucumber/cucumber.xml"
-)
+// )
 // @ConfigurationParameter(key = "cucumber.filter.tags", value = "not @ignored")
 // public class CucumberTest { }
 
 
 package com.starlight.app;
 
+import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/features",
-    glue = "com.starlight.app.steps",
-    plugin = {
-        "pretty",
-        "summary",
-        "html:target/cucumber-report.html",
-        "json:target/cucumber.json",
-        "junit:target/cucumber/cucumber.xml"
-    },
-    tags = "not @ignored"
+    features = "src/test/resources/features", // path to your .feature files
+    glue = "com.starlight.app.steps",         // package containing step definitions
+    plugin = {"pretty", "html:target/cucumber-report.html"},
+    monochrome = true
 )
-public class CucumberTest {
+public class CucumberIT {
+    // no code needed here, the annotations handle everything
 }
