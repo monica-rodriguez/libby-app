@@ -17,19 +17,3 @@
 // public class CucumberTest { }
 
 
-package com.starlight.app;
-
-import org.junit.runner.RunWith;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-
-@RunWith(Cucumber.class)
-@CucumberOptions(
-    features = "src/test/resources/features", // path to your .feature files
-    glue = "com.starlight.app.steps",         // package containing step definitions
-    plugin = {"pretty", "html:target/cucumber-report.html"},
-    monochrome = true
-)
-public class CucumberIT {
-    // no code needed here, the annotations handle everything
-}
