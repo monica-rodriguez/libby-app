@@ -47,7 +47,7 @@ class BookServiceTest {
 
     @Test
     void search_matchesFirstName() {
-        // F. Scott/Francis should match "fran"
+        // Lee should match Lee Child Better Off Dead
         Books b1 = book("Lee/Andrew", "Child", "Better Off Dead", "Mystery");
         // control
         Books b2 = book("Haruki", "Murakami", "Kafka on the Shore", "Literary");
@@ -71,7 +71,6 @@ class BookServiceTest {
 
     @Test
     void search_title_and_genre() {
-        //ensures flexibility with the paramets (not case-sensitive - user-friendly)
         Books b1 = book("Rebecca", "Kuang", "Babel", "Fantasy");
         Books b2 = book("Neil", "Gaiman", "Coraline", "Horror");
 
