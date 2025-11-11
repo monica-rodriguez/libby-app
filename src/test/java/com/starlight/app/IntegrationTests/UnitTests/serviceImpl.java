@@ -83,6 +83,100 @@ class BookServiceTest {
             assertEquals(2, svc.search("", "   ", null, null).size());
         });
     }
+        @Test
+void search_firstName_and_lastName() {
+    Books b1 = book("James", "Patterson", "Invisible", "Thriller");
+    Books b2 = book("James", "Cameron", "Avatar", "Science Fiction");
+
+    runSearch(seed(b1, b2), svc -> {
+        var result = svc.search("James", "Patterson", null, null);
+        assertEquals(1, result.size());
+        assertEquals("Invisible", result.get(0).getBookTitle());
+    });
+}
+
+@Test
+void search_firstName_and_genre() {
+    Books b1 = book("James", "Patterson", "Invisible", "Thriller");
+    Books b2 = book("James", "Patterson", "The Gift", "Fantasy");
+
+    runSearch(seed(b1, b2), svc -> {
+        var result = svc.search("James", null, null, "Thriller");
+        assertEquals(1, result.size());
+        assertEquals("Invisible", result.get(0).getBookTitle());
+    });
+}
+
+@Test
+void search_firstName_and_title() {
+    Books b1 = book("James", "Patterson", "Invisible", "Thriller");
+    Books b2 = book("James", "Patterson", "The Gift", "Fantasy");
+
+    runSearch(seed(b1, b2), svc -> {
+        var result = svc.search("James", null, "Invisible", null);
+        assertEquals(1, result.size());
+        assertEquals("Thriller", result.get(0).getBookGenre());
+    });
+}
+
+@Test
+void search_lastName_and_genre() {
+    Books b1 = book("James", "Patterson", "Invisible", "Thriller");
+    Books b2 = book("Victoria", "Aveyard", "Red Queen", "Fantasy");
+
+    runSearch(seed(b1, b2), svc -> {
+        var result = svc.search(null, "Patterson", null, "Thriller");
+        assertEquals(1, result.size());
+        assertEquals("Invisible", result.get(0).getBookTitle());
+    });
+}
+
+@Test
+void search_lastName_and_title() {
+    Books b1 = book("James", "Patterson", "Invisible", "Thriller");
+    Books b2 = book("Victoria", "Aveyard", "Red Queen", "Fantasy");
+
+    runSearch(seed(b1, b2), svc -> {
+        var result = svc.search(null, "Patterson", "Invisible", null);
+        assertEquals(1, result.size());
+        assertEquals("Thriller", result.get(0).getBookGenre());
+    });
+}
+
+@Test
+void search_title_and_genre_combination() {
+    Books b1 = book("Rebecca", "Kuang", "Babel", "Fantasy");
+    Books b2 = book("Neil", "Gaiman", "Coraline", "Horror");
+
+    runSearch(seed(b1, b2), svc -> {
+        var result = svc.search(null, null, "Babel", "Fantasy");
+        assertEquals(1, result.size());
+        assertEquals("Rebecca", result.get(0).getFirstName());
+    });
+}
+
+@Test
+void search_multiple_results_for_author() {
+    Books b1 = book("James", "Patterson", "Invisible", "Thriller");
+    Books b2 = book("James", "Patterson", "Criss Cross", "Thriller");
+    Books b3 = book("James", "Patterson", "The Black Book", "Thriller");
+
+    runSearch(seed(b1, b2, b3), svc -> {
+        var result = svc.search("James", "Patterson", null, "Thriller");
+        assertEquals(3, result.size(), "Should return all thrillers by James Patterson");
+    });
+}
+
+@Test
+void search_allNullParameters_throwsException() {
+    Books b1 = book("James", "Patterson", "Invisible", "Thriller");
+
+    runSearch(seed(b1), svc -> {
+        assertThrows(IllegalArgumentException.class, () ->
+                svc.search(null, null, null, null),
+                "Expected exception when all parameters are null");
+    });
+    }
 
     private interface ServiceConsumer { void accept(BookService svc); }
 
@@ -94,7 +188,8 @@ class BookServiceTest {
             svc.loadBooksList();
             consumer.accept(svc);
         }
-    }
+        }
+    
 
     private static List<Books> seed(Books... books) {
         return List.of(books);
