@@ -1,0 +1,51 @@
+/* GLOBAL THEME */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0b0f1a; /* deep night */
+  color: #ffffff;      /* white text */
+  font-family: 'Georgia', serif;
+}
+
+
+body {
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body {
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* Links */
+a {
+  color: #b4c7ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #e0e7ff;
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  background-color: #1f2333;
+  border: 1px solid #3a3f55;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+button:hover {
+  background-color: #2f344a;
+  border-color: #6b73a0;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
