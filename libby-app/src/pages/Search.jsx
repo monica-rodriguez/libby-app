@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import BookCard from '../components/BookCard'
+import './Search.css'
 
 function Search() {
     const [query, setQuery] = useState('')

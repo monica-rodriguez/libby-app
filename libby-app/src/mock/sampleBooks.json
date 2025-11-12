@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "Title": "The Stranger",
+        "FirstNames": "Albert",
+        "LastNames": "Camus",
+        "Genre": "Absurdist Fiction"
+    },
+    {
+        "id": "2",
+        "Title": "The Plague",
+        "FirstNames": "Albert",
+        "LastNames": "Camus",
+        "Genre": "Absurdist Fiction"
+    },
+    {
+        "id": "3",
+        "Title": "Brave New World",
+        "FirstNames": "Aldous",
+        "LastNames": "Huxley",
+        "Genre": "Dystopian Fiction"
+    },
+    {
+        "id": "4",
+        "Title": "Lightlark",
+        "FirstNames": "Alex",
+        "LastNames": "Aster",
+        "Genre": "Fantasy"
+    },
+    {
+        "id": "5",
+        "Title": "Nightbane",
+        "FirstNames": "Alex",
+        "LastNames": "Aster",
+        "Genre": "Fantasy"
+    },
+    {
+        "id": "6",
+        "Title": "Skyshade",
+        "FirstNames": "Alex",
+        "LastNames": "Aster",
+        "Genre": "Fantasy"
+    },
+    {
+        "id": "7",
+        "Title": "His Perfect Crime",
+        "FirstNames": "Alex",
+        "LastNames": "Sigmore",
+        "Genre": "Thriller"
+    },
+    {
+        "id": "8",
+        "Title": "King of Wrath",
+        "FirstNames": "Ana",
+        "LastNames": "Huang",
+        "Genre": "Romance"
+    },
+    {
+        "id": "9",
+        "Title": "King of Pride",
+        "FirstNames": "Ana",
+        "LastNames": "Huang",
+        "Genre": "Romance"
+    },
+    {
+        "id": "10",
+        "Title": "King of Greed",
+        "FirstNames": "Ana",
+        "LastNames": "Huang",
+        "Genre": "Romance"
+    }
+]

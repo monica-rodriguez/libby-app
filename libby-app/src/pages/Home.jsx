@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import BookCard from '../components/BookCard'
 import './Home.css';
+import sampleBooks from '../mock/sampleBooks.json';
 
 function Home() {
     const [books, setBooks] = useState([]);
@@ -8,6 +9,7 @@ function Home() {
 
   //backend endpoint to fetch books 
     useEffect(() => {
+        /*
         fetch('http://localhost:8080/starlightFolklore/getAll') //backend endpoint
             .then(res => res.json())
             .then(data => {
@@ -15,7 +17,12 @@ function Home() {
                 setLoading(false);
               })
             .catch(err => console.error(err))
-    }, []);
+        */ //use when backend is ready
+
+        //sample JSON
+        setBooks(sampleBooks);
+        setLoading(false);
+    }, []); 
 
     if (loading) {
         return <div className="loading">Loading...</div>;
