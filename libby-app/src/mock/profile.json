@@ -1,0 +1,6 @@
+{
+    "user": "Reader1",
+    "email": "reader1@example.com",
+    "joined": "October 2025",
+    "stats": ["CheckedOut: 3", "Finished: 5", "TBR: 8"]
+}

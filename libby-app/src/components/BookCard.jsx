@@ -1,27 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import BookDetails from '../pages/BookDetails';
-import BookCard from './BookCard';
+import './BookCard.css';
+import { Link } from 'react-router-dom';
 
-function App() {
-  const sampleBook = { id: 1, title: "Sample Book", author: "Author Name" };
+function BookCard({ book }) {
+  if (!book) return null;
 
   return (
-    <Router>
-      <div className="App">
-        <h1>Libby App</h1>
-        
-        {/* Example usage of BookCard */}
-        <BookCard book={sampleBook} />
+    <div className="book-card">
+      <h3>{book.Title}</h3>
+      <p>Author: {book.FirstNames} {book.LastNames}</p>
+      <p>Genre: {book.Genre}</p>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/book/:id" element={<BookDetails />} />
-        </Routes>
-      </div>
-    </Router>
+      <Link to={'/book/${book.id}'}>View Details</Link>
+    </div>
   );
 }
 
-export default App;
+export default BookCard;

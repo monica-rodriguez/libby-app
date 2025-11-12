@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Data
+//@Data
 public class Books {
     @JsonProperty("FirstNames")
     private String firstName;
@@ -41,4 +41,24 @@ public class Books {
         }
         return author;
     }
+
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getBookGenre() { return bookGenre; }
+    public String getBookTitle() { return bookTitle; }
+
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public void setBookTitle(String bookTitle)  {
+        this.bookTitle = bookTitle;
+    }
+    public void setBookGenre(String bookGenre) {
+        this.bookGenre = bookGenre;
+    }
+
 }
