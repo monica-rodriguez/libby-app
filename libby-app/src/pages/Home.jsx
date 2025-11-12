@@ -9,7 +9,7 @@ function Home() {
 
   //backend endpoint to fetch books 
     useEffect(() => {
-        /*
+        
         fetch('http://localhost:8080/starlightFolklore/getAll') //backend endpoint
             .then(res => res.json())
             .then(data => {
@@ -17,11 +17,11 @@ function Home() {
                 setLoading(false);
               })
             .catch(err => console.error(err))
-        */ //use when backend is ready
+         //use when backend is ready
 
-        //sample JSON
+        /*sample JSON
         setBooks(sampleBooks);
-        setLoading(false);
+        setLoading(false); */
     }, []); 
 
     if (loading) {
