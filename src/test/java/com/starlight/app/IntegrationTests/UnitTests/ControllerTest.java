@@ -54,8 +54,8 @@ class ControllerTest {
                 .thenReturn(List.of(book));
 
         mockMvc.perform(get("/starlightFolklore")
-                .param("title", "Babel")
-                .accept(MediaType.APPLICATION_JSON))
+                        .param("title", "Babel")
+                        .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
     }
