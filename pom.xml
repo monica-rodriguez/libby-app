@@ -141,7 +141,7 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-
+<!--added build annotation for lombok processing-->
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
