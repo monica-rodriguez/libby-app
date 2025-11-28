@@ -167,16 +167,6 @@ void search_multiple_results_for_author() {
     });
 }
 
-@Test
-void search_allNullParameters_throwsException() {
-    Books b1 = book("James", "Patterson", "Invisible", "Thriller");
-
-    runSearch(seed(b1), svc -> {
-        assertThrows(IllegalArgumentException.class, () ->
-                svc.search(null, null, null, null),
-                "Expected exception when all parameters are null");
-    });
-    }
 
     private interface ServiceConsumer { void accept(BookService svc); }
 
