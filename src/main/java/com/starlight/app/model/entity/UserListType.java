@@ -1,4 +1,7 @@
 package com.starlight.app.model.entity;
 
-public enum UserLists {
+public enum UserListType {
+    CURRENT,
+    FINISHED,
+    TBR
 }

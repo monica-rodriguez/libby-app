@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/starlightFolklore") //http://localhost:8080/starlightFolklore
+@RequestMapping("/starlightFolklore/api") //http://localhost:8080/starlightFolklore/api
 public class BookController {
 
     private final BookService service;

@@ -9,6 +9,9 @@ import java.util.List;
 
 @Data
 public class Books {
+
+    private String bookId;
+
     @JsonProperty("FirstNames")
     private String firstName;
 
