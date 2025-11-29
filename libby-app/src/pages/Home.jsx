@@ -54,7 +54,7 @@ function Home() {
     <div className="home-container">
       <h1>All Books</h1>
 
-      <div className="book-list">
+      <div className="book-grid">
         {currentBooks.length === 0 ? (
           <p>No books found.</p>
         ) : (
