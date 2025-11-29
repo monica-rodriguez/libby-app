@@ -4,6 +4,12 @@
   background: transparent; 
 }
 
+.logo {
+  width: auto;
+  height: 120px;
+  margin-bottom: 15px;
+}
+
 .app-title {
   font-family: "Georgia", serif;
   font-weight: 600;

@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import BookDetail from "./pages/BookDetails";
 import Profile from "./pages/Profile";
-import Lists from "./pages/Lists";
 import "./App.css";
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
       <main>
         {activeTab === "home" && <Home />}
         {activeTab === "search" && <Search />}
-        {activeTab === "lists" && <Lists />}
         {activeTab === "bookDetail" && <BookDetail />}
         {activeTab === "profile" && <Profile />}
       </main>
