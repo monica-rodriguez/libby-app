@@ -51,3 +51,5 @@ To run the tests, open the terminal in VS Code and type ./mvnw test or mvn test.
 
 ## RELEASE 2.1.0
 - Adds the cross-origin link to connect to the react dev server
+- Run mvn spring-boot:run for the backend to run 
+- Run npm run start in the front end to get it rendering. 
