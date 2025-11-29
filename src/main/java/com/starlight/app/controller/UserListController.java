@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 @RestController
 @RequestMapping("starlightFolklore/api/users/{userId}/reading-list")
+@CrossOrigin(origins = "http://localhost:3000") //react server
 public class UserListController {
 
     private final UserListService userListService;
