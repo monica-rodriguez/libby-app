@@ -73,3 +73,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## Release 2.1.0
 - Fixing the backend to frontend connection
 - Adding pagination to the search page 
+- Run mvn spring-boot:run for the backend to run 
+- Run npm run start in the front end to get it rendering. 
