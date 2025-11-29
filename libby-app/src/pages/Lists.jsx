@@ -8,7 +8,7 @@ function Lists() {
     const [loading, setLoading] = useState(true)
     
     useEffect(() => {
-        fetch('http://localhost:8080/starlightFolklore/getAll') //backend endpoint
+        fetch('http://localhost:8080/starlightFolklore/api/getAll') //backend endpoint
             .then(res => res.json())
             .then(data => {
               setLists(data)
