@@ -1,27 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import BookDetails from '../pages/BookDetails';
-import BookCard from './BookCard';
+import React from "react";
+import "./BookCard.css";
 
-function App() {
-  const sampleBook = { id: 1, title: "Sample Book", author: "Author Name" };
+function BookCard({ book }) {
+  if (!book) return null;
 
   return (
-    <Router>
-      <div className="App">
-        <h1>Libby App</h1>
-        
-        {/* Example usage of BookCard */}
-        <BookCard book={sampleBook} />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/book/:id" element={<BookDetails />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="book-card">
+      <h3>{book.bookTitle ?? book.Title}</h3>
+      <p>
+        <strong>Author:</strong>{" "}
+        {(book.firstName ?? book.FirstNames) + " " + (book.lastName ?? book.LastNames)}
+      </p>
+      <p>
+        <strong>Genre:</strong> {book.bookGenre ?? book.Genre}
+      </p>
+    </div>
   );
 }
 
-export default App;
+export default BookCard;

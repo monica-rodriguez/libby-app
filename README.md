@@ -45,6 +45,9 @@ To run the tests, open the terminal in VS Code and type ./mvnw test or mvn test.
 - Cucumber file, service tests and step definitions need fixing (files are commented out for testing purposes, please remove the comments to see the errors)
 
 ## RELEASE 2.0.0
-- Adds lombok processing plugin to the pom file (hoping to fix the lombok issue with this. needs external testing.)
+- Adds lombok processing plugin to the pom file 
 - Adding case-insensitivity for author, title, and genre search 
 - Adding list capability for users to add books to a collection of current reads, finished, and tbr (to be read).
+
+## RELEASE 2.1.0
+- Adds the cross-origin link to connect to the react dev server
