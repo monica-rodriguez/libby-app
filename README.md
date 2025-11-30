@@ -32,7 +32,7 @@ Please switch to feature branches and do not push commits to main directly. When
   - only handles get requests at the moment
   - 
 ## RELEASE 1.1.1
-[//] cucumber testing was excluded for this project. Tested using Mockito 
+[//] cucumber testing was excluded for this project. Tested using Mockito and Junit tests 
 -In this release, Cucumber testing was added for the backend.
 The main feature file is located in src/test/resources/features/book_search.feature, and it contains different scenarios to test the search functions. These include searching for a book by title, genre, and author’s name, as well as checking that the system shows the proper error message when no search parameters are provided.
 
