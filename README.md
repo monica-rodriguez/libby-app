@@ -57,3 +57,4 @@ To run the tests, open the terminal in VS Code and type ./mvnw test or mvn test.
 ## RELEASE 2.1.1
 - Adds the cross-origins to the UserListController
 - Fixing controller tests: changing to use the new endpoint
+- Adding the new Streaks API and service tests 

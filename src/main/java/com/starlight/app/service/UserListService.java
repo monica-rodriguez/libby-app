@@ -6,6 +6,7 @@ import com.starlight.app.model.entity.UserListType;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -28,6 +29,18 @@ public class UserListService {
         readingList.addBook(listType, book);
 
         return readingList;
+    }
+
+    public boolean isBookInList(String userId, String bookId, UserListType listType) {
+        ReadingList readingList = getUserLists(userId);
+        List<Books> books = readingList.getBooks(listType);
+
+        return books.stream()
+                .anyMatch(b -> bookId.equals(b.getBookId()));
+    }
+
+    public boolean isCurrentlyReading(String userId, String bookId) {
+        return isBookInList(userId, bookId, UserListType.CURRENT);
     }
 }
 
