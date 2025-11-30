@@ -27,7 +27,7 @@ class ControllerTest {
 
     @Test
     void null_params_test() throws Exception {
-        mockMvc.perform(get("/starlightFolklore"))
+        mockMvc.perform(get("/starlightFolklore/api"))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().string(org.hamcrest.Matchers.containsString(
                         "At least one of the search parameters must be provided")));
@@ -39,7 +39,7 @@ class ControllerTest {
         when(bookService.search("Rebecca", "Kuang", null, null))
                 .thenReturn(List.of(book));
 
-        mockMvc.perform(get("/starlightFolklore")
+        mockMvc.perform(get("/starlightFolklore/api")
                         .param("firstName", "Rebecca")
                         .param("lastName", "Kuang")
                         .accept(MediaType.APPLICATION_JSON))
@@ -53,7 +53,7 @@ class ControllerTest {
         when(bookService.search(null, null, "Babel", null))
                 .thenReturn(List.of(book));
 
-        mockMvc.perform(get("/starlightFolklore")
+        mockMvc.perform(get("/starlightFolklore/api")
                         .param("title", "Babel")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -66,7 +66,7 @@ class ControllerTest {
         when(bookService.search(null, null, null, "Fantasy"))
                 .thenReturn(List.of(book));
 
-        mockMvc.perform(get("/starlightFolklore")
+        mockMvc.perform(get("/starlightFolklore/api")
                         .param("title", "Fantasy")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -77,7 +77,7 @@ class ControllerTest {
     void getAll_happy_Test() throws Exception {
         when(bookService.getFullList()).thenReturn(List.of(new Books(), new Books()));
 
-        mockMvc.perform(get("/starlightFolklore/getAll")
+        mockMvc.perform(get("/starlightFolklore/api/getAll")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
