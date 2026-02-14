@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Chatbot.css";
+import design from "../assets/SF_Chatbot_Design(1).png";
 
 export default function ChatWindow({ onClose }) {
   const [messages, setMessages] = useState([
@@ -22,14 +23,24 @@ export default function ChatWindow({ onClose }) {
   return (
     <div className="chat-window">
       <div className="chat-header">
-        <span>🪄Starlight Chatbot</span>
+        <span>🪄Starlight Guide</span>
         <button onClick={onClose}>✖</button>
       </div>
 
       <div className="chat-body">
         {messages.map((msg, i) => (
-          <div key={i} className={`msg ${msg.sender}`}>
-            {msg.text}
+          <div key={i} className={`msg-row ${msg.sender}`}>
+      
+            {msg.sender === "bot" && (
+              <div className="avatar">
+                <img src={design} alt="Onyx the Starlight Guide" />
+              </div>
+            )}
+
+            <div className={`msg ${msg.sender}`}>
+              {msg.sender === "bot" && <strong>Onyx:</strong>} {msg.text}
+            </div>
+
           </div>
         ))}
       </div>
