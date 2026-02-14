@@ -22,7 +22,7 @@ export default function ChatWindow({ onClose }) {
   return (
     <div className="chat-window">
       <div className="chat-header">
-        <span>✨ Starlight Guide</span>
+        <span>🪄Starlight Chatbot</span>
         <button onClick={onClose}>✖</button>
       </div>
 
