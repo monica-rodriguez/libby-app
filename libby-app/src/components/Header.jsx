@@ -5,8 +5,10 @@ import logo from '../assets/logo.png';
 function Header({ activeTab, setActiveTab }) {
   return (
     <header className="header">
-      <img src={logo} alt="Starlight Folklore Logo" className="logo" />
-      <h1 className="app-title">Starlight Folklore</h1>
+      <div className="left-section">
+        <img src={logo} alt="Starlight Folklore Logo" className="logo" />
+        <h1 className="app-title">Starlight Folklore</h1>
+      </div>
       
       <nav className="nav-bar">
         <button className={activeTab === 'home' ? 'active' : ''} onClick={() => setActiveTab('home')}>Home</button>

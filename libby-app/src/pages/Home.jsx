@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BookCard from "../components/BookCard";
 import "./Home.css";
+import Chatbot from "../components/Chatbot";
 
 function Home() {
   const [books, setBooks] = useState([]);
@@ -83,6 +84,9 @@ function Home() {
           </button>
         </div>
       )}
+
+      <Chatbot />
+      
     </div>
   );
 }
