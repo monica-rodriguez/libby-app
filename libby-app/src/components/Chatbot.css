@@ -2,9 +2,9 @@
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 60px;
-  height: 60px;
-  background: #6b4ce6;
+  width: 80px;
+  height: 80px;
+  background: #6b4ce63e;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -16,8 +16,36 @@
   transition: transform 0.2s ease;
 }
 
+.chatbot-bubble img { 
+  width: 85%; 
+  height: 85%; 
+  object-fit: contain; 
+}
+
 .chatbot-bubble:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(107, 76, 230, 0.9),
+              0 0 30px rgba(107, 76, 230, 0.6);
+}
+
+.chatbot-bubble::after { 
+  content: "Chatbot"; 
+  position: absolute; 
+  bottom: 90px; 
+  right: 50%; 
+  transform: translateX(50%); 
+  background: rgba(0, 0, 0, 0.7); 
+  padding: 6px 10px; 
+  border-radius: 6px; 
+  font-size: 14px; 
+  opacity: 0; 
+  pointer-events: none; 
+  transition: opacity 0.2s ease; 
+  white-space: nowrap; 
+}
+
+.chatbot-bubble:hover::after { 
+  opacity: 1; 
 }
 
 .chat-window {
