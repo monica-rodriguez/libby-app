@@ -1,0 +1,119 @@
+.profile-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+  
+  background-color: #0b0c2a; 
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at center, rgba(50,50,120,0.5), rgba(11,12,42,1));
+  background-size: 80px 80px, 100px 100px, 150px 150px, cover;
+  background-position: 0 0, 50px 50px, 30px 70px, center;
+}
+
+.profile-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  /*text-shadow: 0 0 8px rgba(255, 255, 255, 0.4),
+               0 0 14px rgba(117, 131, 255, 0.5);*/
+}
+
+.profile-page h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.profile-page p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.profile-page ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.profile-page li {
+  background-color: rgba(30, 30, 70, 0.8);
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+              0 0 30px rgba(255, 255, 255, 0.05) inset;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-page li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3),
+              0 0 35px rgba(255, 255, 255, 0.1) inset;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.stats-bubbles {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.bubble {
+  position: relative;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), rgba(11,12,42,0.95));
+  color: #f0f0f0;
+  padding: 15px 25px;
+  border-radius: 12px;
+  min-width: 120px;
+  text-align: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2),
+              0 0 30px rgba(117, 131, 255, 0.1) inset;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  overflow: hidden;
+}
+
+.bubble:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4),
+              0 0 35px rgba(117, 131, 255, 0.2) inset;
+}
+
+.bubble.tbr {
+  background: radial-gradient(circle at 30% 30%, rgba(8, 3, 15, 0.632), rgba(11,12,42,0.95));
+}
+
+.bubble.checkedOut {
+  background: radial-gradient(circle at 30% 30%, rgba(8, 3, 15, 0.632), rgba(11,12,42,0.95));
+}
+
+.bubble.finished {
+  background: radial-gradient(circle at 30% 30%, rgba(8, 3, 15, 0.632), rgba(11,12,42,0.95));
+}
+
+@media (max-width: 600px) {
+  .stats-bubbles {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

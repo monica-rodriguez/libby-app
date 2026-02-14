@@ -1,18 +1,16 @@
 .book-card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 15px;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
+  background: #ffffff;
+  color: #000000;        /* make text black */
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #333;
 }
 
 .book-card h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
+  margin: 0 0 0.25rem 0;
 }
 
 .book-card p {
-  font-size: 14px;
-  color: #555;
+  margin: 0.1rem 0;
 }

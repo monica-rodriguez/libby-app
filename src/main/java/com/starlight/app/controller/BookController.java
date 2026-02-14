@@ -3,6 +3,7 @@ package com.starlight.app.controller;
 import com.starlight.app.model.entity.Books;
 import com.starlight.app.service.BookService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000") // Allow requests from the React frontend
 @RestController
 @RequestMapping("/starlightFolklore") //http://localhost:8080/starlightFolklore
 public class BookController {
@@ -44,7 +46,7 @@ public class BookController {
 
     //get entire books list
     @GetMapping("/getAll")
-    public List<Books> allTitles() {
+    public List<Books> getAll() {
         return  service.getFullList();
     }
 

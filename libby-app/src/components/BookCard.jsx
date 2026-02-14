@@ -1,17 +1,19 @@
-import React from 'react';
-import './BookCard.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./BookCard.css";
 
 function BookCard({ book }) {
   if (!book) return null;
 
   return (
     <div className="book-card">
-      <h3>{book.Title}</h3>
-      <p>Author: {book.FirstNames} {book.LastNames}</p>
-      <p>Genre: {book.Genre}</p>
-
-      <Link to={'/book/${book.id}'}>View Details</Link>
+      <h3>{book.bookTitle ?? book.Title}</h3>
+      <p>
+        <strong>Author:</strong>{" "}
+        {(book.firstName ?? book.FirstNames) + " " + (book.lastName ?? book.LastNames)}
+      </p>
+      <p>
+        <strong>Genre:</strong> {book.bookGenre ?? book.Genre}
+      </p>
     </div>
   );
 }
