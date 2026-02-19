@@ -4,3 +4,4 @@ target/
 *.log
 .mvn/wrapper/maven-wrapper.jar
 .DS_Store
+libby-app/openJdk-25/

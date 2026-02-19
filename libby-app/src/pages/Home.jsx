@@ -3,7 +3,7 @@ import BookCard from "../components/BookCard";
 import "./Home.css";
 import Chatbot from "../components/Chatbot";
 
-function Home() {
+function Home({ setActiveTab }) {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -85,7 +85,7 @@ function Home() {
         </div>
       )}
 
-      <Chatbot />
+      <Chatbot setActiveTab={setActiveTab} />
       
     </div>
   );

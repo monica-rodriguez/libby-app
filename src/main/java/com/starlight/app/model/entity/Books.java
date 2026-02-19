@@ -1,13 +1,16 @@
 package com.starlight.app.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.Entity;
 
-//@Data
+
+@Data
 public class Books {
     @JsonProperty("FirstNames")
     private String firstName;

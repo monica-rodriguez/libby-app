@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import BookDetail from "./pages/BookDetails";
 import Profile from "./pages/Profile";
+import Dashboard from "./pages/Dashboard";
 import "./App.css";
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
     <div className="app-container">
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
       <main>
-        {activeTab === "home" && <Home />}
+        {activeTab === "home" && <Home setActiveTab={setActiveTab} />}
         {activeTab === "search" && <Search />}
         {activeTab === "bookDetail" && <BookDetail />}
         {activeTab === "profile" && <Profile />}
+        {activeTab === "dashboard" && <Dashboard />}
       </main>
       <footer>
         <p>© 2025 Starlight Folklore</p>
